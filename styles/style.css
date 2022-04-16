@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Shadows+Into+Light+Two&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: gainsboro;
+}
+
+.ContenedorTitulo{
+    font-family: 'Shadows Into Light Two', cursive;
+    background-color: rgba(251, 251, 251, 0.3);
+    color: white;
+    font-size: 40px;
+    position: relative;
+    top: 60px;
+    width: 100%;
+}
+
+#fondo{
+    background-image: url(../images/pastor1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+#titulo{
+    color: #fff;
+    display: flex;
+    width: 100%;
+}
+
+#titulo h1{
+    float: left;
+}
+
+.ContenedorNav{
+    width: 100%;
+    margin: auto;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 22px;
+    color: white;
+}
+
+#Cabeza{
+    color: white;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    background-color: rgba(149, 164, 165, 0.5);
+    padding: 5px;
+}
+
+#Cabeza h1{
+    float: left;
+}
+
+.menu{
+    float: right;
+    margin-top: 10px;
+    display: block;
+}
+
+.menu li{
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+
+.menu li ul{
+    display: none;
+    position: absolute;
+}
+
+.menu li:hover ul{
+    display: block;
+}
+
+li ul li{
+    height: -145;
+    top: 0px;
+    padding: 10px;
+}
+.menu a{
+    color: white;
+    text-align: none;
+    padding: 5px 10px;
+}
+
+.menu a:hover {
+    background-color: rgba(251, 251, 251,0.5);
+}
+
+.contenedorPrincipal{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.contenedorPrincipal a{
+    color: white;
+    text-decoration: none;
+    width: 10px;
+    padding: 5px 10px;
+}
+
+#Principal{
+    color: white;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    padding: 10px;
+    top: 55%;
+}
+
+main{
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+table img{
+    height: 200px;
+}
+
+.contenedor-ovejero{
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+.Descripcion {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.otrosNombres{
+    margin-bottom: 20px;
+}
+
+video {
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+}
+
+.pie {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
