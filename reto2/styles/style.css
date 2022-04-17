@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+#Cabeza{
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    background-color: #333;
+    padding: 10px;
+}
+
+#fondo{
+    background-image: url(../Images/Depositphotos_131240710_xl-2015-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+#titulo{
+    color: #fff;
+    display: flex;
+    width: 100%;
+}
+
+.menu li{
+    list-style: none;
+    float: left;
+    margin: 20px;
+}
+
+.menu a{
+    color: #fff;
+    text-align: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: small;
+}
+
+.ContenedorTitulo{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    top: 60px;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+#fondo div button{
+    background-color: #333;
+    color: #fff;
+    font-size: large;
+    font-weight: 300;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:40px;
+    padding-right:40px;
+    border-style: hidden;
+
+}
+
+#fondo div button:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+.started{
+    margin-top: 100px;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.card{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 50px 20px;
+}
+
+.card img{
+    height: 40px;
+    width: 40px;
+}
+
+.TitulosCard{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.Descripcion{
+    font-size: medium;
+}
+
+.card tr td button{
+    background-color: #fff;
+    color: #333;
+    font-size: small;
+    font-weight: 150;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+    border-style:solid;
+    border-color: #333;
+}
+
+.card tr td button:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+.Pie{
+    color: #fff;
+    width: 100%;
+    height: auto;
+    background-color: #333;
+    padding: 35px;
+    text-align: center;
+    font-size: x-small;
+}
