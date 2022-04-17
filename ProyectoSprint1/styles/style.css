@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Shadows+Into+Light+Two&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(../images/fondo.jpg);
+    background-repeat: no-repeat;
+}
+
+input {
+    width: 400px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.contenido {
+    display: flex; 
+    justify-content: center;
+}
+
+.principal {
+    margin-top: 20px;
+    border: 1px solid #ECECEC; 
+    box-sizing: border-box; 
+    width: 600px;
+}
+
+.cabecera {
+    border: 1px solid #ECECEC; 
+    box-sizing: border-box;
+}
+
+.texto{
+    color: white;
+    text-align: center;
+}
+
+.formulario {
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.boton {
+    width: 200px; 
+    padding: 5px; 
+    margin-left: 100px; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.resumen {
+    color: white; 
+    background-color: gray; 
+    width: 275px; 
+    margin-left: 50px; 
+    border-radius: 15px; 
+    padding: 15px; 
+    margin-bottom: 20px; margin-top: 10px;
+}
+
+.limpiar {
+    width: 200px; 
+    padding: 5px; 
+    margin-left: 35px; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    border-radius: 15px;
+}

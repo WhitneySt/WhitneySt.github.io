@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Calculadora de propinas</title>
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="principal">
+            <header class="cabecera">
+                <h1 class="texto">Calculadora de Propinas</h1>
+            </header>
+            <div class="formulario">
+                <input type="text" name="valor" id="valor" placeholder="Digite el valor de la cuenta">
+                <input type="text" name="propina" id="propina" placeholder="Digite el % de la propina">
+                <button class="boton" onclick="calcular()">Calcular</button>
+                <div id="resumen"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
