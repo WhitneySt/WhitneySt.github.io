@@ -3,17 +3,32 @@ function calcular() {
     let valor = document.getElementById("valor").value;
     let propina = document.getElementById("propina").value;
 
-    //Convertir a entero los valores digitados y recibidos como string
-    valor = parseInt(valor);
-    propina = parseInt(propina);
-
-    if(valor === "" || valor < 0) {
+    if(valor === "" && propina === "") {
+        alert("Debe digitar valor de cuenta y porcentaje.");
+        return;
+    }
+    
+    if(valor === "") {
         alert("Debe digitar un valor de cuenta válido!.");
         return;
     }
 
     if(propina === "") {
         alert("Debe digitar un porcentaje de propina válido!.");
+        return;
+    }
+
+    //Convertir a entero los valores digitados y recibidos como string
+    valor = parseInt(valor);
+    propina = parseInt(propina);
+
+    if(valor < 0) {
+        alert("Debe digitar un valor de cuenta válido!.");
+        return;
+    }
+
+    if(propina < 0) {
+        alert("Debe digitar un porcentaje  de propina válido!.");
         return;
     }
 
