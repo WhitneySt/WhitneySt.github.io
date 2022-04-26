@@ -213,6 +213,7 @@ button {
         position: static;
         width: 77.55px;
         height: 32px;
+        margin-bottom: 0;
     }
 
     .container-left h2 {
