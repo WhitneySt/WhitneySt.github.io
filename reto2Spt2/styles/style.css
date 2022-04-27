@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0;
+    display: flex;
+    background-color: #F5F5FA;
+    font-family: 'Poppins';
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 6%;
+}
+
+.title h1 {
+    font-size: 56px;
+}
+
+.title p {
+    font-size: 16px;
+    color: #848199;
+}
+
+.cardsContainer {
+    display: flex;
+    align-content:center;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    border-radius: 26px;
+}
+
+.card {
+    width: 234px;
+    height: 390px;
+    margin: 40px;
+    flex-grow: 1;
+}
+
+.precio h1 {
+    font-size: 28px;
+    display: inline;
+}
+
+.precio h2 {
+    font-size: 16px;
+    color: #848199;
+    display: inline;
+}
+
+.card h1 {
+    font-size: 28px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #848199;
+}
+
+ul{
+    width: 234px;
+    height: 144px;
+    padding: 0;
+    margin-bottom: 16px;
+    color: #848199;
+}
+
+.items1 li {
+    display: block;
+    font-size: 12px;
+}
+
+.items1 li:nth-last-child(-n+3) {
+    opacity: 27%;
+  }
+
+.items1 i {
+    color: gray;
+    margin-right: 5px;
+}
+
+.items2 li {
+    display: block;
+    font-size: 12px;
+}
+
+.items2 li:nth-last-child(-n+2) {
+    opacity: 27%;
+  }
+
+.items2 i {
+    color: gray;
+    margin-right: 5px;
+}
+
+.items3 li {
+    display: block;
+    font-size: 12px;
+    color: initial
+}
+
+.items3 i {
+    color:#FFFFFF;
+    margin-right: 5px;
+}
+
+.items li {
+    display: block;
+    font-size: 12px;
+}
+
+.items i {
+    color: gray;
+    margin-right: 5px;
+}
+
+button{
+    width: 100%;
+    background-color:rgba(255, 142, 60, 0.1);
+    font-size: 16px;
+    color:#FF8E3C;
+    font-weight: 700;
+    padding: 12px 32px;
+    border-radius: 90px;
+    border: none;
+}
+
+.cardPop{
+    background-color:#FF8E3B;
+    box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
+    border-radius: 20px;
+    transform: translate(0, -50px);
+    flex-grow: 1;
+}
+
+.cardPop section{
+    width: 234px;
+    height: 390px;
+    margin: 53px 34px;
+}
+
+.cardPop div{
+    background-color:#FFBF90;
+    font-size: 12px;
+    float: right;
+    padding: 8px 40px;
+    border-radius:13.5px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.cardPop button{
+    color: #FFFFFF;
+    background-color:#373737;
+}
+
+@media screen and (max-width:360px){
+    .title h1{
+        font-size: 28px;
+    }
+
+    .cardsContainer{
+        flex-direction: column;
+        background-color: #F5F5FA;
+        align-items: center;
+    }
+
+    .cardPop{
+        order: -1;
+        transform: none;
+        margin-bottom: 40px;
+    }
+
+    .card{
+        background-color: #FFFFFF;
+        border-radius: 26px;
+        padding: 29px;
+        margin-top: 0;
+        margin-bottom: 48px;
+    }
+}
