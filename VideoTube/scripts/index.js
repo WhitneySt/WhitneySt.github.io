@@ -33,7 +33,17 @@ function cargarVideos(items) {
 const btnMusica = document.getElementById('Musica');
 btnMusica.addEventListener('click', ({ target }) => {
     let videos = localStorage.getItem("videos") ? JSON.parse(localStorage.getItem("videos")) : [];
-    const videosMusica = videos.filter(video => video.categoria === target.value);
+    const videosMusica = videos.filter(function(video){
+        return video.categoria === target.value
+    });
+
+    // const nuevo = []
+    // for (let index = 0; index < videos.length; index++) {
+    //     const element = videos[index];
+    //     if(element.categoria === target.value) {
+    //         nuevo.push(element)
+    //     }
+    // }
     cargarVideos(videosMusica);
 });
 
