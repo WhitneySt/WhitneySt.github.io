@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/form.css">
+    <title>Subir video</title>
+</head>
+<body>
+    <header class="cabecera">
+        <a href="../index.html"><img class="logo" src="../images/logo.png" alt="Inicio">VideoTube</a>
+    </header>
+    <form name="formulario" class="formulario" id="formulario">
+        <label for="videotitle">Título del video:</label><input id="video" type="text" placeholder="Video" required>
+        <label for="visitas">Número de visitas:</label><input id="vistas" type="number" placeholder="Vistas" required>
+        <label for="póster">Póster:</label><input type="url" id="url" placeholder="URL del poster" required>
+        <label for="fecha">Fecha de hoy:</label><input id="fecha" type="date" placeholder="Fecha de cargue del video" required>
+        <label for="username">Nombre del usuario:</label><input id="usuario" type="text" placeholder="Usuario" required>
+        <label for="seleccionar">Categorías:</label>
+        <select id="categorias" name="categorias" required>
+            <option value="-1">Seleccionar</option>
+            <option value="Música">Música</option>
+            <option value="Programación">Programación</option>
+            <option value="Movies">Movies</option>
+        </select>
+        <button id="subir" type="button">Subir video</button>
+    </form>
+    <script src="../scripts/formulario.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

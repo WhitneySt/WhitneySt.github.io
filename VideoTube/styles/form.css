@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    font-family: 'Poppins';
+    color: #FFFFFF;
+    height: 800px;
+
+}
+
+.cabecera{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.cabecera img:hover{
+    transform: scale(1.4);
+}
+
+.cabecera a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: Impact;
+    font-size: 48px; 
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.formulario input{
+    width: 448px;
+    height: 20px;
+    padding: 12px 16px;
+    border: 1px solid #6F6F6F;
+    background-color: #181818;
+    font-size:16px;
+    color: #A3A3A3;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.formulario label{
+    font-weight: 900;
+}
+
+.formulario button{
+    width: 50%;
+    margin-top: 16px;
+    background-color: #c501e2;
+    padding: 8px 16px;
+    border: 1px solid #6F6F6F;
+    border-radius: 44px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #FFFFFF; 
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.formulario select{
+    height: 48px;
+    color: #A3A3A3;
+    font-size: 16px;
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border: 1px solid #6F6F6F;
+    
+}
+
+.formulario button:hover{
+    background-color: #2ef8a0;
+}
+
+@media screen and (max-width:360px){
+    .formulario input, select{
+        max-width: 250px;
+    }
+}
