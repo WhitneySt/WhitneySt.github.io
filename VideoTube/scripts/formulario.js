@@ -30,7 +30,7 @@ btnSubir.addEventListener('click', () => {
         fecha: fecha.value,
         vistas: vistas.value,
         username: usuario.value,
-        avatar: "../images/miavatar.png",
+        avatar: "https://whitneyst.github.io/VideoTube/images/miavatar.png",
         categoria: categoria
     }
 

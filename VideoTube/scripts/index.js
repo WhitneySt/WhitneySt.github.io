@@ -72,7 +72,7 @@ const cover = document.getElementById("contenedor");
 cover.addEventListener('click', ({ target }) => {
     if (target.id) {
         localStorage.setItem("videoId", target.id);
-        window.location.href = "../pages/verVideo.html";
+        window.location.href = "https://whitneyst.github.io/VideoTube/pages/verVideo.html";
     }
 });
 

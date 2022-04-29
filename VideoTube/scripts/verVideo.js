@@ -76,7 +76,6 @@ btnTodos.addEventListener('click', ({ target }) => {
 
 const sugeridos = document.getElementById("sugeridos");
 sugeridos.addEventListener('click', ({ target }) => {
-    console.log(target)
     if (target.id) {
         const videoId = parseInt(target.id);
         localStorage.setItem("videoId", videoId);
