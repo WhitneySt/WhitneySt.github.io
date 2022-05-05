@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://whitneyst.github.io/ProyectoSprint3/eCommerce/styles/productos.css">
+    <title>Nuevo producto</title>
+</head>
+<body>
+    <header class="cabecera">
+        <nav class="navbar">
+            <h1>Shopping</h1>
+            <ul>
+                <li class="menu">Menú
+                    <ul>
+                        <li><a href="https://whitneyst.github.io/ProyectoSprint3/eCommerce/index.html">Home</a></li>
+                        <li><a href="https://whitneyst.github.io/ProyectoSprint3/eCommerce/pages/productos.html">Productos</a></li>
+                        <li><a href="https://whitneyst.github.io/ProyectoSprint3/eCommerce/pages/notificacion.html">Más información</a></li>
+                    </ul>
+                </li>    
+            </ul>
+            <div class="carrito">
+                <a href="https://whitneyst.github.io/ProyectoSprint3/eCommerce/pages/carrito.html"><img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/shopping-cart.png" alt="carrito"><span>0</span></a>
+            </div>
+        </nav>
+    </header>
+    <main class="form-pago">
+        <h1>Agregar nuevo producto</h1>
+        <form id="formulario"class="formulario">
+            <input id="pName" type="text" placeholder="Nombre del producto">
+            <input id="pImg" type="url" placeholder="URL de la imagen del producto">
+            <input id="pPrecio" type="number" placeholder="Precio">
+            <div class="descripcion">
+                <label>Descripción:</label>
+                <textarea id="pDescripcion"></textarea>
+            </div>
+            <div class="seleccion-categoria">
+                <label for="seleccionar">Categorías:</label>
+                <select id="pCategorias" name="categorias">
+                    <option value="-1">Seleccionar</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+            </div>
+            <button type="submit">Subir</button>
+        </form>
+    </main>  
+    <footer class="pie">
+        <img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/facebook.png" alt="facebook">
+        <img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/instagram.png" alt="instagram">
+        <img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/whatsapp.png" alt="whatsapp">
+        <img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/paypal.png" alt="pay">
+    </footer>
+    <script src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/scripts/masProducto.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

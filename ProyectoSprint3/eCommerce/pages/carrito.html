@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://whitneyst.github.io/ProyectoSprint3/eCommerce/styles/index.css">
+    <title>Carrito</title>
+</head>
+<body>
+    <header class="cabecera">
+        <nav class="navbar">
+            <h1>Shopping</h1>
+            <ul>
+                <li class="menu">Menú
+                    <ul>
+                        <li><a href="https://whitneyst.github.io/ProyectoSprint3/eCommerce/index.html">Home</a></li>
+                        <li><a href="https://whitneyst.github.io/ProyectoSprint3/eCommerce/pages/productos.html">Productos</a></li>
+                        <li><a href="https://whitneyst.github.io/ProyectoSprint3/eCommerce/pages/notificacion.html">Más información</a></li>
+                    </ul>
+                </li>    
+            </ul>
+            <div class="carrito">
+                <a href=""><img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/shopping-cart.png" alt="carrito"><span>0</span></a>
+            </div>
+        </nav>
+    </header>
+    <main  class="pagina-carrito">
+        <table>
+            <thead>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+                <th></th>
+            </thead>
+            <tbody id="cuerpoTabla">
+                
+            </tbody>
+        </table>
+        <div class="seccion-total">
+            <div class="total">
+                <h1>TOTAL</h1>
+                <span id="total">$00.000</span>
+            </div>
+            <button>PAGAR</button>            
+        </div>
+    </main>
+    <footer class="pie">
+        <img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/facebook.png" alt="facebook">
+        <img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/instagram.png" alt="instagram">
+        <img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/whatsapp.png" alt="whatsapp">
+        <img src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/images/paypal.png" alt="pay">
+    </footer>
+    <script src="https://whitneyst.github.io/ProyectoSprint3/eCommerce/scripts/carrito.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

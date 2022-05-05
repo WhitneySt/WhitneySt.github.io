@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction:column;
+    font-family: 'Source Sans Pro';
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    background-image: url("https://content.asos-media.com/-/media/homepages/unisex/generic-hp/archive/oct-2021/microsoftteams-image-(10).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+.cabecera{
+    display: flex;
+}
+
+.navbar{
+   display: flex; 
+   background-color: #DE5285;
+   opacity: 0.9;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+}
+
+.navbar h1{
+    font-family: 'Raleway Dots';
+    font-size: 20px;
+    font-weight: 900;
+    color: #c0ff0c;
+    background-color: #00A4B4;
+    opacity: 1;
+    margin-left: 15px;
+}
+
+.navbar h1:hover{
+    filter: invert();
+}
+
+.menu ul{
+    display: none;
+    font-size: 14px;
+}
+
+.menu:hover{
+    color: #4E3145;
+    font-size: 19px;
+}
+
+.menu:hover ul{
+    display: block;
+}
+
+.menu a:hover{
+    color: #c0ff0c;
+    font-size: 15px;
+    background-color: #00A4B4;
+    opacity: 1;
+}
+
+.carrito{
+    display: flex;
+    margin-right: 15px;
+}
+
+.carrito img{
+    object-fit: cover;
+    width: 35px;
+    height: 35px;
+}
+
+.carrito span{
+    background-color: #4E3145;
+    padding: 7px;
+    clip-path: circle();
+    font-size: 12px;
+}
+
+.carrito:hover{
+    filter: invert();
+}
+
+.containerPrincipal{
+    display: flex;
+    margin: 25px 10px;
+}
+
+.categorias{
+    width: 30%;
+}
+
+.categorias h1{
+    margin-top: 70px;
+}
+
+.categorias button{
+    background-color: #fbfbfd;
+    color: #00A4B4;
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.categorias button:hover{
+    color: #c0ff0c;
+    background-color: #00A4B4;
+}
+
+.principal{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content:flex-end;
+}
+
+.productos{
+    width: 225px;
+    height: 410px;
+    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+
+.productos img{
+    width: 225px;
+    height: 300px;
+    object-fit: cover;
+    margin-top:40px;
+}
+
+.info-producto{
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.info-producto h1{
+    margin: 5px 0;
+}
+
+.info-producto span{
+    background-color:#4E3145;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-producto:hover{
+    transform: translateY(-50%) scale(1.1);
+    background-color:#DE5285;
+    border-radius: 5px;
+}
+
+.info-producto button{
+    background-color: #fbfbfd;
+    color: #00A4B4;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.info-producto button:hover{
+    color: #c0ff0c;
+    background-color: #00A4B4;
+}
+
+.pie {
+    
+    border-top: 3px solid #E1907F;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #91DDE8;
+    margin-top: 110px;
+}
+
+.pie img{
+    width: 30px;
+    height: 30px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.formulario input{
+    width: 330px;
+    height: 20px;
+    padding: 12px 16px;
+    border: 1px solid #DE5285;
+    background-color: #91DDE8;
+    font-size:16px;
+    color: #DE5285;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.formulario input::placeholder{
+    color: #DE5285;
+}
+
+.formulario label{
+    font-weight: 900;   
+}
+
+.check input{
+    width: 90px;
+}
+
+.formulario button{
+    background-color: #fbfbfd;
+    color: #00A4B4;
+    font-family: 'Source Sans Pro';
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid #00A4B4;
+}
+
+.formulario button:hover{
+    color: #c0ff0c;
+    background-color: #00A4B4;
+    border: 2px solid #c0ff0c;
+}
+
+.detalle{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 70px;
+
+}
+
+.detalle div{
+    width: 40%;
+}
+
+.imagen img{
+    width: 450px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.agregar{
+    display: flex;
+    gap: 15px;
+    height: 60px;
+}
+
+.agregar input{
+    width: 40px;
+    padding: 12px 16px;
+    border: 1px solid #DE5285;
+    background-color: #fbfbfd;
+    font-size:16px;
+    color: #DE5285;
+    border-radius: 5px;
+}
+
+.agregar button{
+    background-color: #fbfbfd;
+    color: #00A4B4;
+    font-family: 'Source Sans Pro';
+    font-size: 12px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid #00A4B4;
+}
+
+.agregar button:hover{
+    color: #c0ff0c;
+    background-color: #00A4B4;
+    border: 2px solid #c0ff0c;
+}
+
+#nuevo{
+    margin-top: 300px;
+    font-size: 12px;
+}
+
+.form-pago{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-pago h1{
+    margin-top: 90px;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+}
+
+.descripcion textarea{
+    resize: none;
+    width: 330px;
+    height: 60px;
+    padding: 12px 16px;
+    border: 1px solid #DE5285;
+    background-color: #91DDE8;
+    font-size:16px;
+    color: #DE5285;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.seleccion-categoria select{
+    width: 270px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #DE5285;
+    background-color: #91DDE8;
+    font-size:16px;
+    color: #DE5285;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}

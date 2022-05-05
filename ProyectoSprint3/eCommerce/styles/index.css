@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction:column;
+    font-family: 'Source Sans Pro';
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+.fondo{
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://content.asos-media.com/-/media/homepages/unisex/generic-hp/archive/oct-2021/microsoftteams-image-(10).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.cabecera{
+    display: flex;
+}
+
+.navbar{
+   display: flex; 
+   background-color: #DE5285;
+   opacity: 0.9;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+}
+
+.navbar h1{
+    font-family: 'Raleway Dots';
+    font-size: 20px;
+    font-weight: 900;
+    color: #c0ff0c;
+    background-color: #00A4B4;
+    opacity: 1;
+    margin-left: 15px;
+}
+
+.navbar h1:hover{
+    filter: invert();
+}
+
+.menu ul{
+    display: none;
+    font-size: 14px;
+}
+
+.menu:hover{
+    color: #4E3145;
+    font-size: 19px;
+}
+
+.menu:hover ul{
+    display: block;
+}
+
+.menu a:hover{
+    color: #c0ff0c;
+    font-size: 15px;
+    background-color: #00A4B4;
+    opacity: 1;
+}
+
+.carrito{
+    display: flex;
+    margin-right: 15px;
+}
+
+.carrito img{
+    object-fit: cover;
+    width: 35px;
+    height: 35px;
+}
+
+.carrito span{
+    background-color: #4E3145;
+    padding: 7px;
+    clip-path: circle();
+    font-size: 12px;
+}
+
+.carrito:hover{
+    filter: invert();
+}
+
+.bienvenida{
+    align-self:center;
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 30px;   
+}
+
+.bienvenida h2{
+    font-family: 'Permanent Marker';
+    font-size: 90px;
+}
+
+.principal{
+    background-color:#fbfbfd;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.principal div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #00A4B4;
+    width: 46%;
+    height: 400px;
+    background-size: cover;
+    margin: 10px;
+    border-radius: 20px;
+    
+}
+
+.mujeres{
+    background-image: url("https://media.nastygal.com/i/nastygal/bgg02074_lilac_xl?w=614&h=902&qlt=default&fmt.jp2.qlt=70&fmt=auto");  
+}
+
+.hombres{
+    background-image: url("https://i.pinimg.com/736x/18/6c/3e/186c3e4426b5be0a2abe75582b8aa58a.jpg");
+}
+
+.principal button{
+    background-color: #fbfbfd;
+    color: #00A4B4;
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+.principal button:hover{
+    color: #c0ff0c;
+    background-color: #00A4B4;
+}
+
+.pie {
+    border-top: 3px solid #E1907F;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #91DDE8;
+    margin-top: 10px;
+
+}
+
+.pie img{
+    width: 30px;
+    height: 30px;
+}
+
+.pagina-carrito{
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina-carrito img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pagina-carrito table{
+    margin-top: 70px;
+    text-align: center;
+}
+
+.pagina-carrito th{
+    width: 17%;
+}
+
+.seccion-total{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.total{
+    display: flex;
+    font-size: 15px
+}
+
+.total span{
+    margin: 24.12px 5px;
+    text-align: center;
+}
+
+.pagina-carrito button{
+    background-color: #fbfbfd;
+    color: #00A4B4;
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    border: 1px solid #00A4B4;
+}
+
+.pagina-carrito button:hover{
+    color: #c0ff0c;
+    background-color: #00A4B4;
+    border: 1px solid #c0ff0c;
+}
