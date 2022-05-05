@@ -4,8 +4,9 @@ import getData from "https://whitneyst.github.io/ProyectoSprint3/eCommerce/helpe
 
 let idProduct = JSON.parse(localStorage.getItem('verDetalle'));
 
-function details(id){
-    const products = JSON.parse(localStorage.getItem('Productos'));
+async function details(id){
+    const url ="https://productos-sprint3.herokuapp.com/productos";
+    const products =  await getData(url);
     const seleccion = products.find(item => item.id === id);
     const containerDetail = document.querySelector('.detalle');
 
