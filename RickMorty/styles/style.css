@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --primary-color: #24282f;
+    --secundary-color: #3c3e44;
+}
+
+body{
+    font-family: 'Roboto';
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.cabecera{
+    padding: 1rem;
+    background-color: var(--secundary-color);
+}
+
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;  
+}
+
+.card{
+    background-color: var(--secundary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    width: 500px;
+    height: 188.7px;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.card img{
+    width: 40%;
+    object-fit: cover;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.overview{
+    margin-left: 1rem;
+}
+
+.overview h2{
+    margin: 0.6rem 0 0.1rem;
+    font-size: 25px;
+    font-weight:900;
+}
+
+.status{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #39ff14;
+    margin-right: 0.4rem;
+}
+
+.status1{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 0.4rem;
+}
+
+.overview h3{
+    margin: 0.5rem 0 0.2rem;
+    font-size: 14px;
+    color: grey;
+}
+
+.overview p{
+    margin: 0;
+    font-size: 14px;
+}
+
+.overview div{
+    display: flex;
+    align-items: center;
+}
