@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/2a8d26b16d.js" crossorigin="anonymous"></script>
+    <title>Reto 1 | Bookmark landing page</title>
+</head>
+
+<body id="cuerpo">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img src="./images/logo-bookmark.svg" alt=""></a>
+                <button id="hamburg" class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start navbar-collapse" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header mt-4 pb-5">
+                        <h5 class="offcanvas-title" id="staticBackdropLabel"><img src="./images/logo-bookmark-white.svg" alt="logo"></h5>
+                        <button id="closenav" type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    
+                    <ul id="menu" class="navbar-nav ms-auto mb-2 mb-lg-0 px-5 offcanvas-body">
+                        <li class="nav-item px-3">
+                            <a class="nav-link active" aria-current="page" href="#features">FEATURES</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="#">PRICING</a>
+                        </li>
+                        <li class="nav-ite px-3">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+                        <button id="login" type="button" class="btn btn-primary px-4">LOGIN</button>
+                    </ul>
+                    <div id="iconosredes"class="offcanvas-body"></div>
+                </div>
+            </div>
+        </nav>
+        <div id="hero" class="container d-flex flex-wrap">
+            <div id="subhero" class="row d-flex align-content-center flex-wrap-reverse">
+                <div id="texthero" class="col d-flex align-content-center flex-wrap pt-5 mt-5">
+                    <h1>A Simple Bookmark Manager</h1>
+                    <p>A clean and simple interface to organize your favourite websites. Open a new
+                        browser tab and see your sites load instantly. Try it for free.</p>
+                    <div id="botones" class="d-flex justify-content-between">
+                        <button id="getChrome" type="button" class="btn btn-primary px-3">Get it on Chrome</button>
+                        <button id="getfirefox" type="button" class="btn btn-primary px-3">Get it on Firefox</button>
+                    </div>
+                </div>
+                <div id="imgcontainer" class="col d-flex align-content-center pt-5 mt-5">
+                    <img id="figura" src="./images/illustration-hero.svg" class="img-fluid" alt="illustration-hero">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="features" class="d-flex flex-column mb-3 align-items-center mt-5">
+            <div class="d-flex flex-column mb-3 align-items-center">
+                <h1>Features</h1>
+                <p class="w-50 text-center">Our aim is to make it quick and easy for you to access your favourite
+                    websites.
+                    Your bookmarks sync between your devices so you can access them on the go.</p>
+            </div>
+            <div class="d-flex flex-column mb-3 flex-wrap w-50 justify-content-between align-items-center">
+                <ul id="tabs" class="nav nav-tabs d-flex align-items-center">
+                    <li class="nav-item">
+                        <a id="taba1" class="nav-link text-center" type="button" href="#carouselExampleControlsNoTouching" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">Simple Bookmarking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="taba2" class="nav-link text-center" type="button" href="#carouselExampleControlsNoTouching" data-bs-slide-to="1" aria-label="Slide 2">Speedy Searching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="taba3" class="nav-link text-center" type="button" href="#carouselExampleControlsNoTouching" data-bs-slide-to="2" aria-label="Slide 3">Easy Sharing</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
+                data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div id="tab1" class="carousel-item active">
+
+                        <div id="slides" class="container d-flex flex-wrap">
+                            <div id="imgcontainer1" class="col d-flex align-content-center pt-4 mt-4">
+                                <img id="figura1" src="./images/illustration-features-tab-1.svg" class="img-fluid"
+                                    alt="illustration-features-tab-1">
+                            </div>
+                            <div id="feature1" class="col d-flex align-content-center flex-wrap pt-4 mt-4">
+                                <h1>Bookmark in one click</h1>
+                                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface
+                                    gives you complete control over how you manage your favourite sites.</p>
+                                <button id="getChrome" type="button" class="btn btn-primary px-4">More Info</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="tab2" class="carousel-item">
+
+                        <div id="slides" class="container d-flex flex-wrap">
+                            <div id="imgcontainer1" class="col d-flex align-content-center pt-4 mt-4">
+                                <img id="figura1" src="./images/illustration-features-tab-2.svg" class="img-fluid"
+                                    alt="illustration-features-tab-2">
+                            </div>
+                            <div id="feature1" class="col d-flex align-content-center flex-wrap pt-4 mt-4">
+                                <h1>Intelligent search</h1>
+                                <p>Our powerful search feature will help you find saved sites in no time at all.
+                                    No need to trawl through all of your bookmarks.</p>
+                                <button id="getChrome" type="button" class="btn btn-primary px-4">More Info</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="tab3" class="carousel-item">
+
+                        <div id="slides" class="container d-flex flex-wrap">
+                            <div id="imgcontainer1" class="col d-flex align-content-center pt-4 mt-4">
+                                <img id="figura1" src="./images/illustration-features-tab-3.svg" class="img-fluid"
+                                    alt="illustration-features-tab-3">
+                            </div>
+                            <div id="feature1" class="col d-flex align-content-center flex-wrap pt-4 mt-4">
+                                <h1>Share your bookmarks</h1>
+                                <p>Easily share your bookmarks and collections with others. Create a shareable
+                                    link that you can send at the click of a button.</p>
+                                <button id="getChrome" type="button" class="btn btn-primary px-4">More Info</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="descarga" class="d-flex flex-column mb-3 align-items-center mt-5">
+            <div class="d-flex flex-column mb-3 align-items-center">
+                <h1>Download the extension</h1>
+                <p class="w-50 text-center">We’ve got more browsers in the pipeline. Please do let us know if you’ve
+                    got a favourite you’d like us to prioritize.</p>
+            </div>
+            <div id="navs" class="d-flex justify-content-between w-75 align-items-center flex-wrap">
+                <div id="navegadores"
+                    class="d-flex flex-column mb-3 justify-content-center align-items-center p-4 shadow p-3 mb-5 bg-body rounded">
+                    <img class="mb-5 navegadores" src="./images/logo-chrome.svg" alt="chrome">
+                    <h2 class="mb-2">Add to Chrome</h2>
+                    <span class="mb-5">Minimum version 62</span>
+                    <button id="getChrome" type="button" class="btn btn-primary px-4">Add & Install Extension</button>
+                </div>
+                <div id="navegadores"
+                    class="d-flex flex-column mb-3 justify-content-center align-items-center p-4 shadow p-3 mb-5 bg-body rounded tran1">
+                    <img class="mb-5 navegadores" src="./images/logo-firefox.svg" alt="chrome">
+                    <h2 class="mb-2">Add to Firefox</h2>
+                    <span class="mb-5">Minimum version 55</span>
+                    <button id="getChrome" type="button" class="btn btn-primary px-4">Add & Install Extension</button>
+                </div>
+                <div id="navegadores"
+                    class="d-flex flex-column mb-3 justify-content-center align-items-center p-4 shadow p-3 mb-5 bg-body rounded tran2">
+                    <img class="mb-5 navegadores" src="./images/logo-opera.svg" alt="chrome">
+                    <h2 class="mb-2">Add to Opera</h2>
+                    <span class="mb-5">Minimum version 46</span>
+                    <button id="getChrome" type="button" class="btn btn-primary px-4">Add & Install Extension</button>
+                </div>
+            </div>
+
+        </section>
+        <section id="preguntas" class="d-flex flex-column mb-3 align-items-center mt-5">
+            <div class="d-flex flex-column mb-3 align-items-center">
+                <h1>Frequently Asked Questions</h1>
+                <p class="w-50 text-center">Here are some of our FAQs. If you have any other questions you’d like
+                    answered please feel free to email us.</p>
+            </div>
+            <div class="accordion accordion-flush w-50" id="accordionFlushExample">
+                <div id="Q" class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button id="faq" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            What is Bookmark?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" style="color: hsl(229, 8%, 60%); font-size: 14px;">Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit. Fusce tincidunt
+                            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</div>
+                    </div>
+                </div>
+                <div id="Q" class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button id="faq" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            How can I request a new browser?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" style="color: hsl(229, 8%, 60%); font-size: 14px;">Vivamus luctus
+                            eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+                            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+                            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+                            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</div>
+                    </div>
+                </div>
+                <div id="Q" class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button id="faq" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Is there a mobile app?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" style="color: hsl(229, 8%, 60%); font-size: 14px;">Sed consectetur
+                            quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+                            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+                            sollicitudin ex et ultricies bibendum.</div>
+                    </div>
+                </div>
+                <div id="Q" class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button id="faq" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            What about other Chromium browsers?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" style="color: hsl(229, 8%, 60%); font-size: 14px;">Integer
+                            condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+                            vitae neque eget nisl gravida pellentesque non ut velit.</div>
+                    </div>
+                </div>
+            </div>
+            <button id="getChrome" type="button" class="btn btn-primary px-4 mt-5">More Info</button>
+        </section>
+        <section id="informacion" class="d-flex flex-column pb-5 align-items-center">
+            <h3 class="mt-5">35,000+ already joined</h3>
+            <h1 class="mt-5 w-50 text-center">Stay up-to-date with what we’re doing</h1>
+            <form id="formato" class="d-flex justify-content-between align-items-start w-50 mt-5 flex-wrap">
+                <div id="validar" class="mb-3 w-75">
+                    <input id="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter your email address">
+                    <div id="emailHelp" class="form-text m-0 ps-3">Whoops, make sure it's and email.</div>
+                </div>
+                <button id="contact" type="submit" class="btn btn-primary px-3">Contact Us</button>
+            </form>
+        </section>
+    </main>
+    <footer id="pie" class="d-flex justify-content-around p-4">
+        <div class="d-flex justify-content-start flex-wrap">
+            <ul id="menufoot" class="nav d-flex flex-wrap">
+                <li class="nav-item">
+                    <a class="nav-link active" href="./index.html"><img src="./images/logo-bookmark-white.svg"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">FEATURES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PRICING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+        <div id="iconosFoot" class="d-flex justify-content-around align-items-center gap-4">
+            <i class="fa-brands fa-facebook-square"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+
+
+
+</body>
+
+</html>

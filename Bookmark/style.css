@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --primary-SoftBlue: hsl(231, 69%, 60%);
+    --primary-SoftRed: hsl(0, 94%, 66%);
+    --secundary-gray: hsl(229, 8%, 60%);
+    --secundary-blue: hsl(229, 31%, 21%);
+}
+
+#cuerpo{
+    font-family: 'Rubik';
+    margin: 0;
+    padding: 0;
+}
+
+
+#menu li a{
+    letter-spacing: 2px;
+    color: var(--secundary-blue);
+}
+
+#login{
+    letter-spacing: 2px;
+    background-color: var(--primary-SoftRed);
+    border: none;
+}
+
+#menu li a:hover{
+    color: var(--primary-SoftRed)!important;
+}
+
+#login:hover{
+    background-color: white;
+    color: var(--primary-SoftRed);
+    border: 2px solid var(--primary-SoftRed)!important;
+}
+
+#imgcontainer{
+    background-color: var(--primary-SoftBlue);
+    border-radius: 45% 0 0 45%;
+    transform: scale(0.7) translate(15%,25%);
+}
+
+#figura{
+    transform: translate(-15%,-25%) scale(1.2);
+}
+
+#texthero h1{
+    color: var(--secundary-blue);
+}
+
+#texthero p{
+    color: var(--secundary-gray);
+}
+
+#botones{
+    width: 21rem;
+}
+
+#getChrome{
+    background-color: var(--primary-SoftBlue);
+    border-color: var(--primary-SoftBlue);
+    font-size: 1rem;
+}
+
+#getfirefox{
+    background-color: white;
+    border: none;
+    color: grey;
+    font-weight:500;
+    font-size: 1rem;
+}
+
+#getChrome:hover{
+    background-color: white;
+    color: var(--primary-SoftBlue);
+}
+
+#getfirefox:hover{
+    border: 1px solid var(--secundary-gray);
+}
+
+#features h1{
+    color: var(--secundary-blue);
+    font-size: 25px;
+}
+
+#features p{
+    color: var(--secundary-gray);
+}
+
+#tabs li a{
+    color: var(--secundary-blue);
+}
+
+
+#tabs li :hover{
+    color: var(--primary-SoftRed);
+}
+
+.activa {
+    border-bottom: 3px solid var(--primary-SoftRed) !important;
+}
+
+
+#imgcontainer1{
+    background-color: var(--primary-SoftBlue);
+    border-radius: 0 30% 30% 0;
+    transform: scale(0.7) translate(-30%,30%);
+}
+
+#figura1{
+    transform: translate(30%,-30%) scale(1.2);
+}
+
+#descarga h1{
+    color: var(--secundary-blue);
+    font-size: 25px;
+}
+
+#descarga p{
+    color: var(--secundary-gray);
+}
+
+.navegadores{
+    width: 100px;
+    height: 100px;
+}
+
+#navegadores h2{
+    font-size: 20px;
+}
+
+#navegadores span{
+    font-size: 16px;
+    color: var(--secundary-gray);
+}
+
+.tran1{
+    transform: translateY(30px);
+}
+
+.tran2{
+    transform: translateY(60px);
+}
+
+#preguntas h1{
+    color: var(--secundary-blue);
+    font-size: 25px;
+}
+
+#preguntas p{
+    color: var(--secundary-gray);
+}
+
+#Q h2{
+    font-size: 16px;
+    color: var(--secundary-blue);
+}
+
+#faq:hover{
+    color: var(--primary-SoftRed);
+}
+
+#faq:not(.collapsed){
+    color: var(--secundary-blue);
+    box-shadow: none;
+}
+
+button#faq::after{
+    background-image: url(./images/icon-arrow.svg);
+}
+
+#faq:not(.collapsed)::after{
+    background-image: url(./images/down-chevron.png);
+}
+
+#informacion{
+    margin-top: 100px;
+    background-color: var(--primary-SoftBlue);
+    color: white;
+}
+
+#contact{
+    background-color: var(--primary-SoftRed);
+    border: 2px solid var(--primary-SoftRed);
+}
+
+
+#contact:hover{
+    background-color: white;
+    color: var(--primary-SoftRed);
+}
+
+
+#emailHelp{
+    color: var(--primary-SoftBlue);
+}
+
+.act div{
+    color: white !important;
+    font-style: italic;
+    
+}
+
+.act{
+    background-color: var(--primary-SoftRed);
+    border: 3px solid var(--primary-SoftRed);
+    border-radius: .375rem;
+}
+
+.act input::placeholder{
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+
+#pie{
+    background-color: var(--secundary-blue);
+}
+
+#menufoot a{
+    color: white;
+}
+
+#menufoot a:hover{
+    color: var(--primary-SoftRed);
+}
+
+#iconosFoot{
+    color: white;
+}
+
+#iconosFoot i{
+    width: 40px;
+    font-size: 20px;
+    
+}
+
+#iconosFoot i:hover{
+    color: var(--primary-SoftRed);
+}
+
+.offcanvas{
+    background-color: var(--secundary-blue);
+    opacity: 0.9;
+}
+
+.offcanvas-title{
+    margin-right: 6rem;
+}
+
+.hambur{
+    margin: 7% auto;
+
+}
+
+.hambur li{
+    width: 300px;
+    margin-bottom: 1.5rem;
+    border-bottom: .3px solid white;
+}
+
+.hambur a{
+    text-align: center;
+    color: white !important;
+}
+
+.hambur button{
+    background-color: var(--secundary-blue) !important;
+    border: 2px solid white!important;
+}
+
+.offcanvas-header{
+    border-bottom: .3px solid white;
+}
+
+#iconosredes{
+    color: white;
+}
+
+#iconosredes i{
+    width: 40px;
+    font-size: 20px;
+    
+}
+
+@media screen and (max-width:1200px){
+
+    
+    #subhero{
+        flex-direction: column-reverse;
+    }
+
+    #texthero{
+        justify-content: center;
+        text-align: center;
+    }
+
+    #tabs{
+        flex-direction: column;
+    }
+
+    .tran1{
+        transform: none;
+    }
+    
+    .tran2{
+        transform: none;
+    }
+
+    #nav{
+        justify-content: center;
+    }
+
+    #formato{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center !important; 
+    }
+
+    #validar{
+        width: 100%;
+    }
+
+    #contact{
+        width: 75%;
+    }
+
+    #pie{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menufoot{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    #iconosFoot{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    #slides{
+        flex-direction: column;
+    }
+
+    #feature1{
+        justify-content: center;
+        text-align: center;
+    }
+
+    
+}
