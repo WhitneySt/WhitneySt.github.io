@@ -52,7 +52,9 @@ btnclose.addEventListener('click', () => {
 
 })
 
-form.addEventListener('submit',()=>{
+form.addEventListener('submit',(e)=>{
+
+    e.preventDefault();
     
     if(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email.value)){
         form.reset();
