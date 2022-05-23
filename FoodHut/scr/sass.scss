@@ -221,6 +221,9 @@ $unit: 12px;
 .navbar {
     @include nav-desktop($color-black);
 }
+.navbar-dark {
+    @include nav-desktop($color-white);
+}
 
 .btndownload {
     @include botones($color-salmon, $color-white);
@@ -734,6 +737,13 @@ main {
     }
 }
 
+.dark-mode {
+    * {
+        @include theme-colors(false);
+    }
+}
+
+
 //---------------------
 
 
@@ -765,6 +775,9 @@ main {
 
 
     .navbar {
+        @include nav-movil;
+    }
+    .navbar-dark {
         @include nav-movil;
     }
 
@@ -821,10 +834,4 @@ main {
         top: 2002px;
     }
 
-}
-
-.dark-mode {
-    * {
-        @include theme-colors(false);
-    }
 }

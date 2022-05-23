@@ -14,10 +14,24 @@ function toggleDarkMode(state) {
     darkModeState = state;
 
     const logo = document.getElementById("logo");
+    const btnmobile = document.getElementById("btnmobile");
+    const navbar = document.getElementById("navbar");
+    const btndownload = document.getElementById("btndownload");
+    const btndownloadapp = document.getElementById("btndownloadapp");
     if (state) {
+
+        navbar.classList.remove('navbar');
+        navbar.classList.add('navbar-dark');
+        btndownload.style.backgroundColor="#F54748";
+        btndownloadapp.style.backgroundColor="#F54748";
+
         logo.setAttribute("src", "./images/Logowhite.svg");
+        btnmobile.setAttribute("src", "./images/hamburguer-white.png");
     } else {
+        navbar.classList.remove('navbar-dark');
+        navbar.classList.add('navbar');
         logo.setAttribute("src", "./images/logo.png");
+        btnmobile.setAttribute("src", "./images/icon-hamburger.svg");
     }
 }
 
