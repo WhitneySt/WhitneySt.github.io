@@ -15,7 +15,7 @@ function toggleDarkMode(state) {
 
     const logo = document.getElementById("logo");
     if (state) {
-        logo.setAttribute("src", "./images/logowhite.svg");
+        logo.setAttribute("src", "./images/Logowhite.svg");
     } else {
         logo.setAttribute("src", "./images/logo.png");
     }
