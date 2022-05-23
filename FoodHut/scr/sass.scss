@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+//Definición de variables
+
+$font-stack: 'Poppins';
+$color-black: #191919;
+$color-salmon: #F54748;
+$color-yelow: #FDC55E;
+$color-white: #FFFFFF;
+$gradiente: 105.96deg, #FFC26B -6.45%, #FF8D8E 109.09%;
+$unit: 12px;
+
+//Definición de los temas ligth - dark
+
+@mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+        color: $color-black;
+    }
+
+    @else {
+        background-color: $color-black;
+        color: $color-white;
+    }
+}
+
+//Definición de la función tamaño
+@function size($i) {
+    @return $i*$unit;
+}
+
+//Conjunto de propiedades para la imagen del logo
+
+@mixin logo {
+    width: 121px;
+    height: 78px;
+}
+
+//Configuración del padding la página
+
+@mixin padding-pagina {
+    padding: size(1.5) size(3.8) 0;
+
+}
+
+//Configuración de cajas flexibles- space-between y aling-center
+
+@mixin d-flex () {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin d-flex-space () {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+//Aplicación de propiedades para la barra de navegación modo escritorio
+
+@mixin nav-desktop ($color-fuente) {
+
+    @include d-flex();
+    padding-right: size(3.8);
+
+
+    img {
+        @include logo();
+    }
+
+    .btnmobile {
+        display: none;
+    }
+
+    div {
+        @include d-flex-space();
+        width: 65%;
+    }
+
+    ul {
+        list-style: none;
+        @include d-flex();
+        width: 65%;
+
+        a {
+            text-decoration: none;
+            font-size: 1.1*$unit;
+            color: $color-fuente;
+        }
+    }
+
+}
+
+@mixin nav-movil {
+    .btnmobile {
+        display: inline;
+        width: 36px;
+        height: 27px;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .btndownload {
+        display: none;
+    }
+}
+
+//Aplicación de propiedades para la etiqueta header
+
+@mixin cabecera-config {
+    padding: size(1.5) 0 0 size(3.8);
+    display: flex;
+    flex-direction: column;
+}
+
+//Aplicación de propiedades universales
+@mixin body-config {
+    margin: 0;
+    padding: 0;
+    font: 100% $font-stack;
+}
+
+//Propiedades de un boton
+@mixin botones ($bg-color, $fnt-color) {
+    padding: size(0.75) size(1.42);
+    background-color: $bg-color;
+    color: $fnt-color;
+    border-radius: size(7.14);
+    font-size: 1.1*$unit;
+
+}
+
+@mixin d-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin titulos {
+    font-size: size(3.5);
+    font-weight: 900;
+
+    span {
+        font-weight: 900;
+    }
+
+    .rojo {
+        color: $color-salmon;
+    }
+
+    .amarillo {
+        color: $color-yelow;
+    }
+
+}
+
+@mixin texto {
+    font-size: size(1.6);
+}
+
+@mixin btn-img ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+    border-radius: 50%;
+    border: none;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@mixin search-input {
+    @include d-flex-space();
+    height: 54px;
+    background-color: $color-white;
+    border: .5px solid $color-black;
+    border-radius: size(7.14);
+
+    input {
+        border: none;
+        background-color: transparent;
+        width: 80%;
+        outline: none;
+        border: 0;
+
+        &::placeholder {
+            background-image: url(../images/bx_bx-search.svg);
+            background-repeat: no-repeat;
+            background-position: 1% center;
+        }
+    }
+
+    button {
+        @include btn-img ($ancho: 42px, $alto: 42px);
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+//Aplicación de las propiedades a la página
+
+* {
+    @include body-config();
+    @include theme-colors(true);
+    box-sizing: border-box;
+
+
+}
+
+//Header
+.cabecera {
+    @include cabecera-config();
+    background: linear-gradient(180deg, rgba(245, 71, 72, 0.06) 0%, rgba(245, 71, 72, 0) 100%);
+}
+
+//Barra de navegación
+.navbar {
+    @include nav-desktop($color-black);
+}
+
+.btndownload {
+    @include botones($color-salmon, $color-white);
+    text-decoration: none;
+    border: none;
+}
+
+//frame hero
+
+.hero {
+    @include d-flex();
+
+    .hero-info {
+        @include d-flex-col();
+        padding-right: size(3.8);
+
+        form {
+            @include d-flex-space();
+            @include search-input();
+            margin-top: $unit;
+        }
+    }
+
+    .img-cliente {
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+}
+
+.tittle {
+    @include titulos();
+}
+
+
+.texto {
+    @include texto();
+    margin-top: $unit;
+}
+
+.btns {
+    @include d-flex();
+    width: 370px;
+}
+
+
+.plays {
+    @include d-flex();
+    text-decoration: none;
+    font-size: 1.3*$unit;
+    margin-top: $unit;
+
+    img {
+        @include btn-img ($ancho: 72px, $alto: 72px)
+    }
+}
+
+.trust {
+    @include botones ($bg-color: rgba(245, 71, 72, 0.1), $fnt-color: $color-black);
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+
+}
+
+.decoracion1 {
+    display: flex;
+    align-items: flex-end;
+
+    .dec-1 {
+        display: flex;
+        flex-direction: column;
+
+        .line {
+            height: 190px;
+            position: absolute;
+            top: 100px;
+            left: 190px;
+        }
+
+        .flecha {
+            position: absolute;
+            top: 292px;
+            left: 362px;
+            height: 13px;
+        }
+    }
+}
+
+.container-tittle-orag {
+    @include d-flex();
+}
+
+.orange {
+    position: sticky;
+    left: 450px;
+
+
+}
+
+.slider {
+    width: 22px;
+    position: relative;
+    top: 80px;
+}
+
+//Toggle heart switch 
+
+.heart-switch {
+    --duration: .45s;
+    --stroke: #FDC55E;
+    --stroke-active: #F54748;
+    --fill: #FDC55E;
+    --fill-active: #F54748;
+    --shadow: #{rgba(#00093D, .25)};
+    cursor: pointer;
+    position: relative;
+    transform: scale(var(--s, 1)) translateZ(0);
+    transition: transform .2s;
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+        --s: .95;
+    }
+
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: absolute;
+        outline: none;
+        border: none;
+        pointer-events: none;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        left: 1px;
+        top: 1px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 1px 3px 0 var(--shadow);
+
+        &+svg {
+            width: 36px;
+            height: 25px;
+            fill: var(--fill);
+            stroke: var(--stroke);
+            stroke-width: 1px;
+            stroke-linejoin: round;
+            display: block;
+            transition: stroke var(--duration), fill var(--duration);
+        }
+
+        &:not(:checked) {
+            animation: uncheck var(--duration) linear forwards;
+        }
+
+        &:checked {
+            animation: check var(--duration) linear forwards;
+
+            &+svg {
+                --fill: var(--fill-active);
+                --stroke: var(--stroke-active);
+            }
+        }
+    }
+}
+
+@keyframes uncheck {
+    0% {
+        transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+    }
+
+    50% {
+        transform: rotate(30deg) translateX(9px);
+    }
+
+    75% {
+        transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes check {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    25% {
+        transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+    }
+
+    50% {
+        transform: rotate(30deg) translateX(9px);
+    }
+
+    100% {
+        transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+    }
+}
+
+.Cards {
+    @include d-flex-space ();
+    flex-wrap: wrap;
+    gap: $unit;
+
+    .card {
+        @include d-flex-col();
+        align-items: center;
+        gap: 2*$unit;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(245, 71, 72, 0.06) 0%, rgba(245, 71, 72, 0) 100%);
+        border-radius: 20px;
+        padding: $unit;
+        width: 310px;
+        height: 368px;
+        margin-top: 150px;
+
+        .menuImg {
+            width: 254px;
+            height: 254px;
+            transform: translateY(-127px);
+
+        }
+
+        div {
+            transform: translateY(-127px);
+            @include d-flex();
+            gap: 10px;
+
+            .users {
+                width: 74px;
+            }
+
+            span {
+                @include d-flex();
+                width: 72px;
+            }
+        }
+
+        h5 {
+            font-size: 2*$unit;
+            color: $color-salmon;
+            font-weight: 600;
+            transform: translateY(-127px);
+        }
+
+        p {
+            text-align: center;
+            font-size: $unit;
+            transform: translateY(-127px);
+        }
+
+        .btndownload {
+            transform: translateY(-127px);
+        }
+
+    }
+}
+
+main {
+    @include d-flex-col();
+
+
+    .hero {
+        padding-left: size(3.8);
+        background: linear-gradient(0deg, rgba(245, 71, 72, 0.06) 0%, rgba(245, 71, 72, 0) 100%);
+
+        .hero-info {
+            margin-top: -100px;
+
+            .btns {
+                margin-top: 2*$unit;
+                width: 297px;
+
+                img {
+                    width: 135px;
+                    height: 40px;
+                }
+            }
+        }
+
+    }
+}
+
+.figura1 {
+    position: absolute;
+    top: 1250px;
+    z-index: -100;
+
+}
+
+.figura2 {
+    position: absolute;
+    height: 133px;
+    left: 92%;
+    top: 1750px;
+}
+
+.tsoSection {
+    @include padding-pagina();
+    margin-top: 100px;
+    @include d-flex-col();
+    align-items: center;
+    text-align: center;
+    gap: 2*$unit;
+
+    .tittle {
+        text-transform: capitalize;
+    }
+
+    .texto {
+        font-size: 1.1*$unit;
+        width: 60%;
+    }
+}
+
+.msSection {
+
+    display: flex;
+    align-items: center;
+    padding-right: size(3.8);
+    margin-top: -150px;
+
+    .chef {
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    }
+
+    .msInfo {
+        padding-left: size(3.8);
+
+        .tittle {
+            width: 90%;
+            text-transform: capitalize;
+        }
+
+        .listams {
+            @include d-flex();
+            margin: 2*$unit 0;
+            gap: 2*$unit;
+
+            div {
+                @include d-flex-col();
+                width: 70%;
+                gap: 2*$unit;
+
+                span {
+
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        margin-right: 10px;
+                        width: 26px;
+                        height: 26px;
+                    }
+
+                }
+            }
+        }
+
+        .btndownload {
+            margin-top: 2*$unit;
+        }
+    }
+}
+
+.mmflecha {
+    position: absolute;
+    width: 405.5px;
+    height: 118.95px;
+    top: 2265px;
+    left: 450px;
+    z-index: -3000;
+}
+
+.maflsection {
+    @include padding-pagina();
+
+    .tittle {
+        text-transform: capitalize;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+.btnfil {
+    @include d-flex();
+    margin: 1.1*$unit auto;
+    width: 75%;
+
+    .botonesfil {
+        @include botones($bg-color: transparent, $fnt-color: $color-black);
+        border: 2px solid $color-black;
+        margin-left: $unit;
+    }
+
+    .activo {
+        @include botones($bg-color: $color-salmon, $fnt-color: $color-white);
+        border: 2px solid $color-salmon;
+        margin-left: 1.2*$unit;
+    }
+
+}
+
+//Estilos del pie de página
+
+.contenedor-pie {
+    @include d-flex-col();
+    @include padding-pagina();
+    text-align: center;
+
+    .pie {
+        @include d-flex();
+        text-align: left;
+        margin: 300px 0 20px 0;
+
+        .about-company {
+            @include d-flex();
+
+            div {
+                @include d-flex-col();
+                width: 220px;
+
+                h3 {
+                    font-size: 2*$unit;
+                    color: $color-salmon;
+                    margin-bottom: 15px;
+                }
+
+                span {
+                    font-size: 1.1*$unit;
+                    margin-bottom: 15px;
+                }
+            }
+
+        }
+
+        .seccion-pie {
+
+            margin-bottom: 20px;
+
+
+            h2 {
+                font-size: 3*$unit;
+                color: $color-salmon;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 1.1*$unit;
+                width: 379px;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-size: 2*$unit;
+                color: $color-salmon;
+                margin-bottom: 15px;
+            }
+
+            img {
+                width: 100px;
+            }
+
+            form {
+                width: 380px;
+
+                input {
+                    width: 205px;
+                    border-radius: 38px;
+                    padding: 6px 14px;
+                    border: 1px solid $color-black;
+
+                    &::placeholder {
+
+                        font-size: 14px;
+                    }
+                }
+
+                button {
+                    @include botones($color-salmon, $color-white);
+                    border: 1px solid $color-salmon;
+                }
+            }
+        }
+
+    }
+
+    .copy {
+        font-size: $unit;
+        margin-bottom: 80px;
+
+    }
+}
+
+//---------------------
+
+
+//Adaptación a pantallas móviles
+@media screen and (max-width:1172px) {
+    .pie {
+        flex-direction: column;
+    }
+
+    .about-company {
+        margin-left: auto;
+    }
+
+}
+
+@media screen and (max-width:1367px) {
+    .mmflecha {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width:1220px) {
+    .dec-1 {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width:960px) {
+
+
+    .navbar {
+        @include nav-movil;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+    }
+
+    .hero-info {
+        margin-top: 58px;
+    }
+
+    .orange {
+        position: relative;
+        top: -70px;
+        left: 45%;
+    }
+
+    .slider {
+        display: none;
+    }
+
+    .msSection {
+        @include d-flex-col();
+    }
+
+    .listams {
+        @include d-flex-col();
+    }
+
+    .chef {
+        transform: translateY(-110px);
+    }
+
+    .msInfo {
+        margin-top: -480px;
+    }
+
+    .maflsection {
+        margin-top: 110px;
+    }
+
+    .maflsection {
+        .tittle {
+            width: 80%;
+        }
+    }
+
+}
+
+@media screen and (max-width:428px) {
+
+    .figura2 {
+        left: 79.21%;
+        top: 2002px;
+    }
+
+}
+
+.dark-mode {
+    * {
+        @include theme-colors(false);
+    }
+}
